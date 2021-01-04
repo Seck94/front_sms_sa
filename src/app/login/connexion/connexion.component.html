@@ -1,0 +1,34 @@
+<div class="container mt-5" >
+    <div class="card card0" style="background-color: #673AB7;">
+        <div class="d-flex flex-lg-row flex-column-reverse">
+            <div class="card card1">
+                <div class="row justify-content-center my-auto">
+                    <div class="col-md-8 col-10 my-5">
+                        <div class="row justify-content-center px-3 mb-3"> <img id="logo" src="https://reussirbusiness.com/wp-content/uploads/2017/11/Logo-Sonatel-Academy-480_1-1.png"> </div>
+                        <h3 class="mb-5 text-center heading">File Rouge</h3>
+                        <h6 class="msg-info">Please login to your account</h6>
+                        <form #form="ngForm" (ngSubmit)="onLogin(form.value)" >
+                            <div class="form-group"> 
+                                <label  class="form-control-label text-muted">Username</label> <br>
+                                <small class="text-danger" *ngIf="! username.value">Verifier votre username ! </small>
+                                <input type="text" id="email" name="username" ngModel placeholder="Phone no or email id" class="form-control" required username  #username= "ngModel">  <br>
+                            </div>
+                            <div class="form-group"> 
+                                <label class="form-control-label text-muted">Password</label> <br>
+                                <small class="text-danger" *ngIf="! password.value">saisisser un mot de passe ! </small> 
+                                <input type="password" id="psw" ngModel name="password" placeholder="Password" class="form-control" required password #password= "ngModel"> 
+                            </div>
+                            <div class="row justify-content-center my-3 px-3"> 
+                                <button class="btn btn-primary">Login to Tidi</button> 
+                            </div>
+                            <div class="row justify-content-center my-2"> <a href="#"><small class="text-muted">Forgot Password?</small></a> </div>    
+                        </form>
+                        </div>
+                </div>
+               
+            </div>
+          
+        </div>
+    </div>
+  </div>
+  

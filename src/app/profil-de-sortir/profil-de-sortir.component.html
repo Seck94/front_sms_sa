@@ -1,0 +1,62 @@
+<div class="jumbotron content-wrapper mat-elevation-z8 container mt-5"> 
+    <div class="row">
+      <div class="col-12">
+        <h3>Liste des Utilisateur <span class="float-right"><a [routerLink] = "['/Add-user']">
+          <i class="fas fa-user-plus" title="Ajoutez un user"> add User</i></a></span> </h3>
+    
+      </div>
+    </div>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Libelle</th>
+        <th class="text-center" scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Developpeur Back</td>
+        <td><a title="modifier" routerLink=""><i class="fas fa-user-edit"></i></a></td>
+        <td><a title="suprimer" routerLink=""><i class="fas fa-user-slash"></i></a></td>
+        <td><a title="detail" routerLink=""><i class="fas fa-info-circle"></i></a></td>
+      </tr>
+      <tr>
+        <td>Developpeur Front</td>
+        <td><a routerLink=""><i class="fas fa-user-edit"></i></a></td>
+        <td><a routerLink=""><i class="fas fa-user-slash"></i></a></td>
+        <td><a routerLink=""><i class="fas fa-info-circle"></i></a></td>
+      </tr>
+      <tr>
+        <td>Developpeur FullStack</td>
+        <td><a routerLink=""><i class="fas fa-user-edit"></i></a></td>
+        <td><a routerLink=""><i class="fas fa-user-slash"></i></a></td>
+        <td><a routerLink=""><i class="fas fa-info-circle"></i></a></td>
+      </tr>
+      <tr>
+        <td>Integrateur</td>
+        <td><a routerLink=""><i class="fas fa-user-edit"></i></a></td>
+        <td><a routerLink=""><i class="fas fa-user-slash"></i></a></td>
+        <td><a routerLink=""><i class="fas fa-info-circle"></i></a></td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination float-right">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  </div>

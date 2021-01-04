@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg  navbar-light" style="background-color: #673AB7;">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+     
+      <li class="nav-item dropdown">
+        <a style="color: aliceblue;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog"></i>
+          Parametre
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a [routerLink] = "['/listCompetence']" class="list-group-item list-group-item-action bg-light">Competence</a>
+          <a [routerLink] = "['/referentiel']" class="list-group-item list-group-item-action bg-light">Referentiel</a>
+          <a [routerLink] = "['/promos']" class="list-group-item list-group-item-action bg-light">Promos</a>
+          <a [routerLink] = "['/listgrpcompetence']" class="list-group-item list-group-item-action bg-light">Groupe Competence</a>
+          <a [routerLink] = "['/profilsortir']" class="list-group-item list-group-item-action bg-light">Profil de Sortir</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a style="color: aliceblue;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-users"></i>
+          User
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+           <a [routerLink] = "['/admin']" class="list-group-item list-group-item-action bg-light"><i class="fas fa-users-crown">Utilisateurs</i></a>
+           <a [routerLink] = "['/profils']" class="list-group-item list-group-item-action bg-light"> <i class="fas fa-users-crown">Profils</i></a>
+        </div>
+      </li>
+     
+    </ul>
+
+
+    <h3 style="color: aliceblue;">Serigne Mbacke Seck</h3>
+    <div class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img src="https://source.unsplash.com/1080x720/?leader" class="rounded-circle" width="80" height="50">
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <button class="btn btn-danger my-2 my-sm-0" (click)="onclic()" type="submit">Se déconnecter</button>
+      </div>
+    </div>
+  </div>
+</nav>

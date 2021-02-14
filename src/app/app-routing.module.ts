@@ -4,6 +4,8 @@ import { AddProfilComponent } from './add-profil/add-profil.component';
 import { AddReferntielComponent } from './add-referntiel/add-referntiel.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { AdminComponent } from './admin/admin.component';
+import { AffichePromoComponent } from './affiche-promo/affiche-promo.component';
+import { AuthGuardService } from './auth-guard.service';
 import { CompetenceComponent } from './competence/competence.component';
 import { GroupecompetenceComponent } from './groupecompetence/groupecompetence.component';
 import { NavComponent } from './header/nav/nav.component';
@@ -19,19 +21,21 @@ const routes: Routes = [
 
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'login', component: ConnexionComponent},
-  {path: 'header' , component: NavComponent},
-  {path: 'admin', component: AdminComponent},
-  {path: 'profils', component: ProfilComponent},
-  {path: 'Add-user', component: AddUserComponent},
-  {path: 'referentiel', component: ReferentielsComponent},
-  {path: 'competence', component: CompetenceComponent},
-  {path: 'promos', component: PromosComponent},
-  {path: 'addprofil', component: AddProfilComponent},
-  {path: 'listCompetence', component: ListeCompetenceComponent},
-  {path: 'AddReferentiel', component: AddReferntielComponent},
-  {path: 'groupcompetence', component: GroupecompetenceComponent},
-  {path: 'listgrpcompetence', component: ListGroupecompetenceComponent},
-  {path: 'profilsortir', component: ProfilDeSortirComponent}
+  {path: 'header' , component: NavComponent, canActivate: [AuthGuardService]},
+  {path: 'admin', component: AdminComponent, canActivate: [AuthGuardService]},
+  {path: 'profils', component: ProfilComponent, canActivate: [AuthGuardService]},
+  {path: 'Add-user', component: AddUserComponent, canActivate: [AuthGuardService]},
+  {path: 'referentiel', component: ReferentielsComponent, canActivate: [AuthGuardService]},
+  {path: 'competence', component: CompetenceComponent, canActivate: [AuthGuardService]},
+  {path: 'promos', component: PromosComponent, canActivate: [AuthGuardService]},
+  {path: 'addprofil', component: AddProfilComponent, canActivate: [AuthGuardService]},
+  {path: 'listCompetence', component: ListeCompetenceComponent, canActivate: [AuthGuardService]},
+  {path: 'AddReferentiel', component: AddReferntielComponent, canActivate: [AuthGuardService]},
+  {path: 'groupcompetence', component: GroupecompetenceComponent, canActivate: [AuthGuardService]},
+  {path: 'listgrpcompetence', component: ListGroupecompetenceComponent, canActivate: [AuthGuardService]},
+  {path: 'profilsortir', component: ProfilDeSortirComponent, canActivate: [AuthGuardService]},
+  {path: 'promo', component: AffichePromoComponent, canActivate: [AuthGuardService]},
+  {path: 'promos', component: PromosComponent, canActivate: [AuthGuardService]},
 ];
 
 @NgModule({

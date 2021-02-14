@@ -27,6 +27,16 @@ import { ListeCompetenceComponent } from './liste-competence/liste-competence.co
 import { AddReferntielComponent } from './add-referntiel/add-referntiel.component';
 import { ListGroupecompetenceComponent } from './list-groupecompetence/list-groupecompetence.component';
 import { ProfilDeSortirComponent } from './profil-de-sortir/profil-de-sortir.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AffichePromoComponent } from './affiche-promo/affiche-promo.component';
+import {AccordionModule} from 'primeng/accordion';
+import {MenuItem} from 'primeng/api';
+import {TriStateCheckboxModule} from 'primeng/tristatecheckbox';
+import {MultiSelectModule} from 'primeng/multiselect';
+import {PasswordModule} from 'primeng/password';
+import {InputTextModule} from 'primeng/inputtext';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {ConfirmationService} from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -49,7 +59,9 @@ import { ProfilDeSortirComponent } from './profil-de-sortir/profil-de-sortir.com
     ListeCompetenceComponent,
     AddReferntielComponent,
     ListGroupecompetenceComponent,
-    ProfilDeSortirComponent
+    ProfilDeSortirComponent,
+    NotFoundComponent,
+    AffichePromoComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +70,14 @@ import { ProfilDeSortirComponent } from './profil-de-sortir/profil-de-sortir.com
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    AccordionModule,
+    TriStateCheckboxModule,
+    MultiSelectModule,
+    PasswordModule,
+    InputTextModule,
+    ConfirmDialogModule,
+    ConfirmationService
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 <div class=" jumbotron content-wrapper mat-elevation-z8 container mt-5">
     <div class="row">
         <div class="col-12">
-          <h3>Ajouter un competence </h3>
+          <h3 class="text-center">Ajouter un competence </h3>
       
         </div>
       </div>
@@ -12,16 +12,15 @@
               <div class="form-group row mt-5">
                   <label for="GrpeCompetence" class="col-md-3 col-form-label">Groupe de Competences</label>
                   <div class="col-sm-7">
-                      <select class="form-control form-control-lg">
-                          <option disabled>--</option>
-                          <option value="">Développer le back-end d'une application</option>
-                      </select>
+                          <p-multiSelect [options]="grpcompetences" [(ngModel)]="selectedCities" optionLabel="GroupeAction"></p-multiSelect>
+                     
                   </div>
               </div>
               <div class="form-group row">
                   <label for="libelle" class="col-3 col-form-label">Libelle</label>
                   <div class="col-sm-7">
-                      <input type="text" name="libelle" class="form-control" id="libelle" placeholder="Libelle">
+                    <small class="text-danger" *ngIf="! libelle.value">Ce champs doit-être remplie !!!  </small> 
+                      <input type="text" name="libelle" class="form-control" ngModel id="libelle" placeholder="Libelle" required libelle  #libelle= "ngModel">
                   </div>
               </div>
               <div class="form-group row">
@@ -42,32 +41,38 @@
                           <div class="fade tab-pane row show active" id="home">
                               <div class="col">
                                   <h4 class="mt-2">Groupes  d'actions à réaliser</h4>
-                                  <textarea name="competence" id="competence" class="form-control w-100"></textarea>
+                                  <small class="text-danger" *ngIf="! CT.value">Ce champs doit-être remplie !!!  </small> 
+                                  <textarea name="competence" id="competenc" class="form-control w-100" ngModel required CT  #CT= "ngModel"></textarea>
                               </div>
                               <div class="col">
                                   <h4 class="mt-2">Critere Evaluation</h4>
-                                  <textarea name="competence" id="competence" class="form-control w-100"></textarea>
+                                  <small class="text-danger" *ngIf="! CE.value">Ce champs doit-être remplie !!!  </small> 
+                                  <textarea name="competence" id="compe" class="form-control w-100" ngModel required CE  #CE= "ngModel"></textarea>
                               </div>
                           </div>
           
                            <div class="fade tab-pane row" id="profile">
                               <div class="col">
                                   <h4 class="mt-2">Groupes  d'actions à réaliser</h4>
-                                  <textarea name="competence" id="competence" class="form-control w-100"></textarea>
+                                  <small class="text-danger" *ngIf="! CA.value">Ce champs doit-être remplie !!!  </small> 
+                                  <textarea name="competence" id="cometence" class="form-control w-100" ngModel required CA  #CA= "ngModel"></textarea>
                               </div>
                               <div class="col">
                                   <h4 class="mt-2">Critere Evaluation</h4>
-                                  <textarea name="competence" id="competence" class="form-control w-100"></textarea>
+                                  <small class="text-danger" *ngIf="! CAE.value">Ce champs doit-être remplie !!!  </small> 
+                                  <textarea name="competence" id="comce" class="form-control w-100" ngModel required CAE  #CAE= "ngModel"></textarea>
                               </div>
                           </div>
                           <div class="fade tab-pane row" id="messages">
                               <div class="col">
                                   <h4 class="mt-2">Groupes  d'actions à réaliser</h4>
-                                  <textarea name="competence" id="competence" class="form-control w-100"></textarea>
+                                  <small class="text-danger" *ngIf="! CAE.value">Ce champs doit-être remplie !!!  </small> 
+                                  <textarea name="competence" id="competences" class="form-control w-100" ngModel required CAE  #CAE= "ngModel"></textarea>
                               </div>
                               <div class="col">
                                   <h4 class="mt-2">Critere Evaluation</h4>
-                                  <textarea name="competence" id="competence" class="form-control w-100"></textarea>
+                                  <small class="text-danger" *ngIf="! CAE.value">Ce champs doit-être remplie !!!  </small> 
+                                  <textarea name="competence" id="competencee" class="form-control w-100" ngModel required CAE  #CAE= "ngModel"></textarea>
                               </div>
                           </div>
                       </div>
@@ -83,3 +88,5 @@
       </form>
   </div>
 </div>
+
+<h1>sel</h1>

@@ -35,10 +35,17 @@
     margin-left: 100px;
 }
 .form-group{
-    margin-left: -50px;
+    margin-left: -100px;
 }
 .t{
 
     margin-left: 130px;
     width: 170px;
+}
+.card{
+    width: 100%;
+    padding: 10px;
+}
+input.ng-invalid.ng-touched{
+    border-left: 4px solid red;
 }

@@ -1,9 +1,10 @@
-<div class="jumbotron content-wrapper mat-elevation-z8 container mt-5">
+<div class="jumbotron content-wrapper mat-elevation-z8 container ">
 <h1 class="text-center">Ajoutez un profil </h1>
     <a class="float-right mb-5" routerLink="/profils">liste des profils</a>
 <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Libelle</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" >
+    <label for="exampleFormControlInput1" class="form-label">Libelle</label> <br>
+    <small class="text-danger" *ngIf="! libelle.value">Verifier votre libelle ce champ doit-être rempli! </small>
+    <input type="email" class="form-control" ngModel id="exampleFormControlInput1" required libelle  #libelle= "ngModel">
   </div>
   <div>
 
